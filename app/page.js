@@ -1,0 +1,13 @@
+const services = ["Flooring", "Awnings", "Shutters", "Blinds"];
+const floors = ["Laminate", "Vinyl", "Wood", "Bamboo"];
+export default function Home() {
+  return <main>
+    <header className="nav shell"><a className="brand" href="#top"><span className="mark">R&T</span><span>Rug & Tile<small>PLETTENBERG BAY</small></span></a><nav><a href="#services">Services</a><a href="#flooring">Flooring</a><a href="#contact">Contact</a></nav></header>
+    <section className="hero shell" id="top"><div className="eyebrow">FLOORING • AWNINGS • SHUTTERS • BLINDS</div><h1>Beautiful spaces<br/><em>start from the ground up.</em></h1><p className="lead">Quality flooring and home-improvement solutions in Plettenberg Bay, backed by local service and practical advice.</p><a className="button" href="#contact">Get in touch →</a><div className="heroGrid"><div className="material m1"><span>WOOD</span></div><div className="material m2"><span>VINYL</span></div><div className="material m3"><span>LAMINATE</span></div></div></section>
+    <section className="intro shell" id="services"><div><div className="eyebrow">WHAT WE DO</div><h2>Finishing your space,<br/>beautifully.</h2></div><p>From new floors to window finishes and outdoor shade, Rug & Tile helps Plettenberg Bay customers choose practical products that suit their space and style.</p></section>
+    <section className="cards shell">{services.map((s,i)=><article className="card" key={s}><span className="num">0{i+1}</span><div className="icon"></div><h3>{s}</h3><p>Quality solutions, practical advice and local service for your space.</p><a href="#contact">Enquire ↗</a></article>)}</section>
+    <section className="flooring" id="flooring"><div className="shell flooringInner"><div><div className="eyebrow light">FLOORING OPTIONS</div><h2>A floor for every<br/><em>kind of living.</em></h2><p>Explore popular finishes ranging from low-maintenance contemporary surfaces to the warmth of natural timber.</p></div><div className="floorList">{floors.map((f,i)=><div key={f}><span>0{i+1}</span><strong>{f}</strong><b>→</b></div>)}</div></div></section>
+    <section className="contact shell" id="contact"><div><div className="eyebrow">VISIT OR CONTACT US</div><h2>Let’s talk about<br/>your space.</h2><p>No. 1 Hill House, Main Road<br/>Plettenberg Bay, 6600<br/>Western Cape</p></div><div className="map"><div className="pin">●</div><strong>Rug & Tile</strong><span>Main Road, Plettenberg Bay</span></div></section>
+    <footer><div className="shell footerInner"><div className="brand inverse"><span className="mark">R&T</span><span>Rug & Tile<small>PLETTENBERG BAY</small></span></div><p>Rug & Tile Building Merchants CC<br/><span>Top Carpets Plettenberg Bay</span></p></div></footer>
+  </main>
+}
